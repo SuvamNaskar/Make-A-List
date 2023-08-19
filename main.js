@@ -33,8 +33,15 @@ onValue(listInDB, function(snapshot){
 
 btn.addEventListener("click", function(){
     let inputValue = input.value;
-    push(listInDB, inputValue);
-    clearInput();
+    if(inputValue == "")
+    {
+        alert("Input is blank!");
+    }
+    else
+    {
+        push(listInDB, inputValue);
+        clearInput();
+    }
 })
 
 function clearInput()
